@@ -4,18 +4,18 @@
 #
 Name     : R-pcaPP
 Version  : 1.9.73
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/pcaPP_1.9-73.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pcaPP_1.9-73.tar.gz
 Summary  : Robust PCA by Projection Pursuit
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-pcaPP-lib
+Requires: R-pcaPP-lib = %{version}-%{release}
 Requires: R-mvtnorm
 Requires: R-robustbase
 BuildRequires : R-mvtnorm
 BuildRequires : R-robustbase
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 No detailed description available
@@ -36,11 +36,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521183375
+export SOURCE_DATE_EPOCH=1552867358
 
 %install
+export SOURCE_DATE_EPOCH=1552867358
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521183375
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -75,8 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library pcaPP|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  pcaPP || :
 
 
 %files
@@ -105,7 +104,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/pcaPP/help/pcaPP.rdx
 /usr/lib64/R/library/pcaPP/html/00Index.html
 /usr/lib64/R/library/pcaPP/html/R.css
-/usr/lib64/R/library/pcaPP/libs/symbols.rds
+/usr/lib64/R/library/pcaPP/tests/tpcapp.R
+/usr/lib64/R/library/pcaPP/tests/tpcapp.Rout.save
 
 %files lib
 %defattr(-,root,root,-)
