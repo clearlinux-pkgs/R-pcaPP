@@ -4,15 +4,13 @@
 #
 Name     : R-pcaPP
 Version  : 1.9.73
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/pcaPP_1.9-73.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pcaPP_1.9-73.tar.gz
 Summary  : Robust PCA by Projection Pursuit
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-pcaPP-lib = %{version}-%{release}
-Requires: R-mvtnorm
-Requires: R-robustbase
 BuildRequires : R-mvtnorm
 BuildRequires : R-robustbase
 BuildRequires : buildreq-R
@@ -36,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552867358
+export SOURCE_DATE_EPOCH=1552879409
 
 %install
-export SOURCE_DATE_EPOCH=1552867358
+export SOURCE_DATE_EPOCH=1552879409
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
