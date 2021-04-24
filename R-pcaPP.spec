@@ -4,7 +4,7 @@
 #
 Name     : R-pcaPP
 Version  : 1.9.74
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/pcaPP_1.9-74.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pcaPP_1.9-74.tar.gz
 Summary  : Robust PCA by Projection Pursuit
