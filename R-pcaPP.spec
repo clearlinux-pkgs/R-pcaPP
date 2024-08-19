@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : R-pcaPP
-Version  : 2.0.4.1
-Release  : 54
-URL      : https://cran.r-project.org/src/contrib/pcaPP_2.0-4-1.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/pcaPP_2.0-4-1.tar.gz
+Version  : 2.0.5
+Release  : 55
+URL      : https://cran.r-project.org/src/contrib/pcaPP_2.0-5.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/pcaPP_2.0-5.tar.gz
 Summary  : Robust PCA by Projection Pursuit
 Group    : Development/Tools
 License  : GPL-3.0
@@ -54,10 +54,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1723211995
+export SOURCE_DATE_EPOCH=1724076800
 
 %install
-export SOURCE_DATE_EPOCH=1723211995
+export SOURCE_DATE_EPOCH=1724076800
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
